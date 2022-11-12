@@ -1,0 +1,43 @@
+<div>
+  <form ngForm (ngSubmit)="onSubmit()">
+    <p><label for="name">First name</label>
+    <input type="text" name="name" [(ngModel)] = "model.name" required></p>
+
+    <p><label for="lastname">Lastname</label>
+    <input type="text" name="lastname" [(ngModel)] = "model.lastname" required></p>
+
+    <p><label for="address">Address</label>
+    <input type="text" name="address" [(ngModel)] = "model.address" required></p>
+
+    <p><label for="phone">Phone number</label>
+    <input type="text" name="phone" [(ngModel)] = "model.phone" required></p>
+ 
+    <p><label for="email">Email</label>
+    <input type="email" name="email" [(ngModel)] = "model.email" required></p>
+    
+    <p><label for="password">Password</label>
+    <input type="password" name="password" [(ngModel)] = "model.password" required min-size></p>
+
+    <p><button type="submit" disabled>SAVE</button>
+      <button type="submit" disabled>Cancel</button>
+    </p>
+
+  </form>
+</div>
+
+<style>
+  p{
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(0, 0, 76);
+  }
+  input.ng-invalid {
+    color:red;
+    border-color: red;
+  }
+
+  input.valid {
+    color:green;
+    border-color: green
+  }
+</style>
